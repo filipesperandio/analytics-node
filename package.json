@@ -29,7 +29,8 @@
     "lodash": "^4.17.4",
     "superagent": "^1.4.0",
     "superagent-proxy": "^1.0.0",
-    "superagent-retry": "^0.5.1"
+    "superagent-retry": "^0.5.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "async": "~0.9.0",
@@ -44,7 +45,10 @@
     "node": ">= 0.12.x"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
